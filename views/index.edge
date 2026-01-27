@@ -3,6 +3,7 @@
   <head
     ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>devfolio</title>
+    <meta name="description" content="Devfolio portfolio website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://mmacneil.github.io/devfolio/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="main.bundle.css" />
@@ -45,7 +46,7 @@
           <div class="level">
             <div class="level-item has-text-centered">
               <figure class="image is-128x128">
-                <img class="is-rounded" src="./me-big.jpg" />
+                <img class="is-rounded" src="./me-big.jpg" alt="ark Macneil" />
               </figure>
             </div>
           </div>
@@ -86,7 +87,7 @@
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img src="./dunder-mifflin-logo.png" alt="Placeholder image" />
+                  <img src="./dunder-mifflin-logo.png" alt="Dunder Mifflin" />
                 </figure>
               </div>
               <div class="media-content">
@@ -119,7 +120,7 @@
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img src="./pied-piper-logo.png" alt="Placeholder image" />
+                  <img src="./pied-piper-logo.png" alt="Pied Piper" />
                 </figure>
               </div>
               <div class="media-content">
@@ -214,56 +215,9 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h1 class="title">Contact</h1>
-        <hr />
-        <nav class="level">
-          <div class="level-item has-text-centered">
-            <div>
-              <a href="https://github.com/mmacneil" class="icon is-large">
-                <i class="fab fa-2x fa-github" aria-hidden="true"></i>
-              </a>
-              <p class="heading"><a href="https://github.com/mmacneil">github.com/mmacneil</a></p>
-            </div>
-          </div>
-          <div class="level-item has-text-centered">
-            <div>
-              <a href="https://fullstackmark.com/" class="icon is-large">
-                <i class="fas fa-2x fa-globe" aria-hidden="true"></i>
-              </a>
-              <p class="heading"><a href="https://fullstackmark.com/">fullstackmark.com</a></p>
-            </div>
-          </div>
-          <div class="level-item has-text-centered">
-            <div>
-              <a href="mailto:markmacneil@gmail.com" class="icon is-large">
-                <i class="fas fa-2x fa-envelope" aria-hidden="true"></i>
-              </a>
-              <p class="heading"><a href="mailto:markmacneil@gmail.com">markmacneil@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="level-item has-text-centered">
-            <div>
-              <a href="https://www.linkedin.com/in/markmacneilhfx" class="icon is-large">
-                <i class="fab fa-2x fa-linkedin-in" aria-hidden="true"></i>
-              </a>
-              <p class="heading"><a href="https://www.linkedin.com/in/markmacneilhfx">linkedin</a></p>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <a href="https://github.com/mmacneil/devfolio" target="_blank" class="icon has-text-primary">
-            <i class="fab fa-github" aria-hidden="true"></i> <strong>devfolio</strong></a
-          >
-        </p>
-      </div>
-    </footer>
+    @include("partials/contact")
+    <!-- -->
+    @include("partials/footer")
 
     <script src="./bundle.js"></script>
   </body>
