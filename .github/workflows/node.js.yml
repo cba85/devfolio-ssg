@@ -28,7 +28,7 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: node index.js
-      - run: test -d public || (echo "Error: public directory not created" && exit 1)
+      - run: test -d public
 
   deploy:
     needs: build # Only deploy after build succeeds
