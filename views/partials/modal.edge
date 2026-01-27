@@ -1,0 +1,33 @@
+<div id="project-{{ project.data.id }}-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">{{ project.data.title }}</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div id="project-{{ project.data.id }}-modal-carousel" class="carousel">
+        @each (image in project.data.images)
+        <figure class="image is-4by3 carousel-cell">
+          <img src="./{{ image }}" />
+        </figure>
+        @end
+      </div>
+
+      <div class="content">
+        {{ html.safe(project.html) }}
+
+        <h2>Compétences</h2>
+
+        <div class="tags">
+          @each (skill in project.data.skills)
+          <span class="tag">{{ skill }}</span>
+          @end
+        </div>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Close</button>
+    </footer>
+  </div>
+</div>
