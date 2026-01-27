@@ -28,7 +28,10 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: node index.js
-      - run: test -d public
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-build
+          path: public/
 
   deploy:
     needs: build # Only deploy after build succeeds
@@ -38,6 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: public-build
+          path: public/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
