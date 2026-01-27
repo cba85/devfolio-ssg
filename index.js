@@ -3,6 +3,7 @@ import fs from "fs";
 import { Edge } from "edge.js";
 import matter from "gray-matter";
 import markdownit from "markdown-it";
+import purify from "purify-css";
 
 // Variables / Constants
 const projectsFolder = "./projects";
@@ -40,6 +41,15 @@ for (const projectFile of projectFiles) {
 
 const html = edge.renderSync("index", { projects });
 fs.writeFileSync(`${renderFolder}/index.html`, html, { recursive: true });
+
+// Clean CSS
+const css = fs.readFileSync(`assets/main.bundle.css`, { encoding: "utf-8" });
+
+let options = {
+  output: "public/style.min.css",
+  minify: true,
+};
+purify(html, css, options);
 
 // OUTPUT
 
