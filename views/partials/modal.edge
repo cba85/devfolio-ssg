@@ -9,7 +9,7 @@
       <div id="project-{{ project.data.id }}-modal-carousel" class="carousel">
         @each (image in project.data.images)
         <figure class="image is-4by3 carousel-cell">
-          <img src="./{{ image }}" />
+          <img src="./{{ image }}" alt="{{ project.data.title }}" />
         </figure>
         @end
       </div>
