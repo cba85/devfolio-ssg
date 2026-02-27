@@ -6,7 +6,7 @@
     <meta name="description" content="Devfolio portfolio website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://mmacneil.github.io/devfolio/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" href="main.bundle.css" />
     <script src="https://kit.fontawesome.com/4e5a72c756.js" defer></script>
   </head>
 
@@ -14,13 +14,11 @@
     @include("partials/navbar")
 
     <main>
-      <!-- -->
+
       @include("partials/hero")
 
-      <!-- -->
       @include("partials/about")
 
-      <!-- -->
       @include("partials/experience")
 
       <section class="section">
@@ -30,13 +28,9 @@
           <div class="tile is-ancestor">
             <div class="tile is-vertical is-12">
               <div class="tile">
-                <!-- -->
                 @each(project in projects)
-                <!-- -->
-                @include("partials/project")
-                <!-- -->
-                @include("partials/modal")
-                <!-- -->
+                  @include("partials/project")
+                  @include("partials/modal")
                 @end
               </div>
             </div>
@@ -45,10 +39,8 @@
       </section>
 
       @include("partials/education")
-      <!---->
 
       @include("partials/contact")
-      <!-- -->
 
       @include("partials/footer")
     </main>

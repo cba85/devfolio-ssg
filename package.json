@@ -4,8 +4,5 @@
     "edge.js": "^6.4.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0"
-  },
-  "devDependencies": {
-    "purify-css": "^1.2.5"
   }
 }
