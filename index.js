@@ -3,7 +3,6 @@ import fs from "fs";
 import { Edge } from "edge.js";
 import matter from "gray-matter";
 import markdownit from "markdown-it";
-import purify from "purify-css";
 
 // Variables / Constants
 const projectsFolder = "./projects";
